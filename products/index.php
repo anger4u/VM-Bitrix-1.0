@@ -1,7 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Продукция");
-?><?$APPLICATION->IncludeComponent("bitrix:catalog", ".default", array(
+?>
+
+
+<?
+$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
+$APPLICATION->IncludeComponent("bitrix:catalog", ".default", array(
 	"IBLOCK_TYPE" => "products",
 	"IBLOCK_ID" => "2",
 	"BASKET_URL" => "",
@@ -78,4 +83,8 @@ $APPLICATION->SetTitle("Продукция");
 	)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);
+?>
+
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

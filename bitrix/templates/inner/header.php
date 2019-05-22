@@ -4,7 +4,7 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="<?=LANGUAGE_ID?>">
 <head>
     <?$APPLICATION->ShowHead();?>
 
@@ -29,10 +29,34 @@ IncludeTemplateLangFile(__FILE__);
             <table>
                 <tr>
                     <td rowspan="2" class="hd_companyname">
-                        <h1><a href="">Мебельный магазин</a></h1>
+                        <h1>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/logo.php"
+                                )
+                            );?>
+                        </h1>
                     </td>
                     <td rowspan="2" class="hd_txarea">
-                        <span class="tel">8 (495) 212-85-06</span>	<br/>
+
+                        <span class="tel">
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/phone.php"
+                                )
+                            );?>
+                        </span>	<br/>
+
                         время работы <span class="workhours">ежедневно с 9-00 до 18-00</span>
                     </td>
                     <td style="width:232px">
@@ -90,14 +114,16 @@ IncludeTemplateLangFile(__FILE__);
     </div>
 
     <!--- // end header area --->
-    <div class="bc_breadcrumbs">
-        <ul>
-            <li><a href="">Каталог</a></li>
-            <li><a href="">Мебель</a></li>
-            <li><a href="">Выставки и события</a></li>
-        </ul>
-        <div class="clearboth"></div>
-    </div>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        "nav",
+        Array(
+            "PATH" => "",
+            "SITE_ID" => "s1",
+            "START_FROM" => "0"
+        )
+    );?>
+
     <div class="main_container page">
         <div class="mn_container">
             <div class="mn_content">
