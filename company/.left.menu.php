@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"О компании", 
-		"./", 
+		"/company/index.php", 
 		Array(), 
 		Array(), 
 		"" 
@@ -16,28 +16,42 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Руководство", 
-		"management.php", 
+		"/company/management.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Миссия и стратегия", 
-		"mission.php", 
+		"/company/mission.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Вакансии", 
-		"vacancies.php", 
+		"/company/vacancies.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"История", 
-		"history.php", 
+		"/company/history.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"111", 
+		"/company/111/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"test dir", 
+		"/company/test-dir/", 
 		Array(), 
 		Array(), 
 		"" 
