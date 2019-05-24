@@ -1,1 +1,0 @@
-<?php $filesInfo = array("/bitrix/templates/inner/components/bitrix/menu/test/script.js" => "1558608476409",); ?>
